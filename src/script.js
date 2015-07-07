@@ -90,16 +90,8 @@ angular.module('myApp', ['ngMessages'])
         scope: {
             ngModel: '=',
         },
-        //基本的にtemplateURLを使った方がいいです。デモのため、templateを使っています。
-        //templateURL : 'ja-datepicker.html',
 
-        template: '<div ng-form="myForm">' +
-            '<input  ng-model="ngModel" name="name" ng-pattern="/^((19|20)\\d\\d)[\\-\\/](0?[1-9]|1[012])[\\-\\/](0?[1-9]|[12][0-9]|3[01])$/" size="10" maxlength="10" type="text" placeholder="yyyy-mm-dd" class="form-control" />' +
-            '<div ng-messages="myForm.name.$error" class="error-message">' +
-            '<div ng-message="pattern">正しい日付の形式で入力して下さい。<br/>例）2015-1-30</div>' +
-            '</div>' +
-            '{{ngModel | wareki}}' +
-            '</div>',
+        templateUrl : 'ja-datepicker.html',
         link: function (scope, elm) {
 
             //console.log(elm);
